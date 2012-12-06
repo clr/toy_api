@@ -1,9 +1,11 @@
+# Format the Riak Object into what the web browser wants.
 class ObjectViewer
   def initialize(object)
     @object = object
   end
 
-  def to_json
-    @object.data.to_json
+  # Format it.
+  def to_s
+    @object.data
   end
 end
